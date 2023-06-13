@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      img {
+        height: 200px;
+        width: 250px;
+        border-radius: 8px;
+        transform: scale(2);
+      }
+
+      .carousel {
+        background-color: orange;
+        width: 800px;
+        margin: 100px auto;
+        border-radius: 8px;
+        color: #fff;
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        gap: 152px;
+        padding-left: 200px;
+        position: relative;
+      }
+
+      .test {
+        margin-left: 0;
+      }
+
+      .test-text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5rem;
+        margin-bottom: 32px;
+      }
+
+      .test-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .test-job {
+        font-size: 12px;
+      }
+
+      .btn {
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+      }
+
+      .btn-left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn-right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 52px);
+        bottom: 0;
+        display: flex;
+        gap: 12px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid orange;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot-fill {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="person4.jpg" alt="" />
+      <blockquote class="test">
+        <p class="test-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo
+          fuga ullam repudiandae, necessitatibus magni omnis. Quisquam
+          distinctio reiciendis at perferendis ducimus ab fuga hic assumenda
+          placeat ea, molestias nam.
+        </p>
+        <p class="test-author">Person 1</p>
+        <p class="test-job">Developer</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot dot-fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>

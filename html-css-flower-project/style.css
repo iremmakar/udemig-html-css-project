@@ -1,0 +1,428 @@
+/* yazı fontu ekleme */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 20px auto;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.navbar-left {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-right i {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.navbar-right i:hover {
+  color: gray;
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+
+.navbar-left-logo {
+  font-family: "Indie Flower";
+  text-decoration: none;
+  line-height: 64px;
+  font-size: 44px;
+  color: rgb(6, 51, 6);
+}
+
+.navbar-left-logo:hover {
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+
+.navbar-left-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar-left-menu a {
+  text-decoration: none;
+  font-size: 18;
+  color: gray;
+}
+
+.navbar-left-menu a:first-child {
+  color: black;
+  font-weight: 700;
+}
+
+.navbar-left-menu a:hover {
+  color: green;
+}
+
+.banner {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #c1dcdc;
+}
+
+.banner-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 40px;
+  padding: 40px 0 40px 50px;
+  z-index: 2;
+}
+
+.banner-left h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 64px;
+  width: 480px;
+}
+
+.banner-left-contents {
+  display: flex;
+  gap: 50px;
+}
+
+.content:first-child {
+  padding-right: 50px;
+}
+
+.content p {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.content span {
+  font-size: 18px;
+}
+
+.banner-left-search {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.banner-left-search input {
+  border: none;
+  outline: none;
+  width: 80%;
+  font-size: 18px;
+}
+
+.banner-left-search i {
+  background-color: #c1dcdc;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.banner-right {
+  width: 50%;
+  position: relative;
+}
+
+.banner-right img {
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(-1);
+}
+
+.banner-right-bg {
+  position: absolute;
+  width: 400px;
+  height: 360px;
+  background-color: gray;
+  bottom: 0;
+  right: 10%;
+  border-radius: 50% 20% 0px 50%;
+}
+
+.product {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.product-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  align-items: start;
+}
+
+.more {
+  background-color: #c1dcdc;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.product-card {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.product-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: start;
+}
+
+.product-cards img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-cards p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.product-cards span {
+  color: gray;
+  font-size: 18px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(134, 126, 126, 0.276);
+  width: 100%;
+  padding: 20px 0;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-title h1 {
+  font-size: 32px;
+}
+
+.about-title p {
+  font-size: 18px;
+  color: gray;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+}
+
+.about-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-cards i {
+  font-size: 42px;
+  background-color: #c1dcdc;
+  padding: 20px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.about-cards p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-cards span {
+  text-align: center;
+
+  /* verilen satır sayısına göre taşan kısmın sonuna ... ekle işlemi */
+  display: -webkit-box;
+  overflow: hidden; /* taşan kısmı gizler*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* satır sayısı*/
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #c1dcdc;
+  align-items: center;
+}
+
+.footer-left {
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-left h1 {
+  font-family: "Indie Flower";
+}
+
+.footer-left p {
+  font-size: 18px;
+  color: black;
+}
+
+.footer-left-social {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-left-social a {
+  color: gray;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(134, 126, 126, 0.276);
+}
+
+.footer-left-social a:hover {
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right ul li {
+  list-style-type: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.footer-right ul li:nth-child(1) {
+  font-weight: 800;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.category-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.category-card {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+}
+
+.category-cards {
+  text-align: center;
+  width: 100%;
+}
+
+.category-cards img {
+  width: 100%;
+}
+
+.category-footer {
+  text-align: center;
+  color: gray;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-footer p {
+  width: 350px;
+}
+
+.category-footer button {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* responsive ayarlar*/
+
+@media screen and (max-width: 900px) {
+  .banner-left {
+    width: 100%;
+  }
+
+  .banner-left h1 {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .banner-left-contents {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-right {
+    display: none;
+  }
+
+  .footer-left {
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .product {
+    flex-direction: column;
+  }
+  .product-title {
+    text-align: center;
+    align-items: center;
+  }
+}

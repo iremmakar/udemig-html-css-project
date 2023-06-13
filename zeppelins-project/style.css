@@ -1,0 +1,352 @@
+@font-face {
+  font-family: Montserat;
+  src: url(./asssets/fonts/montserat/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Montserat;
+  src: url(./asssets/fonts/montserat/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Montserat;
+  src: url(./asssets/fonts/montserat/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Montserat;
+  src: url(./asssets/fonts/montserat/Montserrat-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Montserat;
+  src: url(./asssets/fonts/montserat/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+* {
+  font-family: "Montserat", sans-serif;
+  box-sizing: border-box;
+  color: #424242;
+}
+
+body {
+  width: 70%;
+  margin: auto;
+}
+
+.app__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.app_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.app_title {
+  margin-right: 1rem;
+}
+
+.app_title2 {
+  display: none;
+}
+
+.menu__collapse {
+  display: none;
+}
+
+.menu_items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu_items li {
+  margin-right: 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu_items li.active {
+  font-weight: 600;
+  color: #5a47ab;
+}
+
+.app__showcase {
+  display: flex;
+  margin: 5rem 0;
+}
+
+.app__showcase-info {
+  flex: 6;
+  padding: 0 3rem;
+}
+
+.app__showcase-info h1,
+h3 {
+  font-size: 52px;
+  margin: 0;
+}
+
+.app__showcase-info h1 {
+  color: #d05270;
+  font-weight: bold;
+}
+
+.app__showcase-info h3 {
+  font-weight: 500;
+}
+
+.app__showcase-info p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.app__showcase-image {
+  flex: 4;
+  padding: 0 3rem;
+}
+
+.app__links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.app__links .app__link {
+  color: #fff;
+  font-size: 12px;
+  width: 30%;
+  height: 60px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__links .app__link img {
+  margin-right: 1.5rem;
+}
+
+.app__links .app__link.twitter {
+  background-color: #47acdf;
+}
+
+.app__links .app__link.linkedin {
+  background-color: #1275b1;
+}
+.app__links .app__link.medium {
+  background-color: #000000;
+}
+
+.app__blog-categories {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.app__blog-categories .item {
+  font-weight: 500;
+  font-size: 18px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.app__blog-categories .item.active {
+  color: #d05270;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #d05270;
+  padding: 0 2rem;
+}
+
+.app__post-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.app__post-list .app__post-card {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin: 3rem 0;
+}
+
+.app__post-list .app__post-card .post-image {
+  height: 200px;
+  width: 100%;
+}
+
+.app__post-list .app__post-card .post-date {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.app__post-list .app__post-card .post-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #d05270;
+}
+
+.app__post-list .app__post-card .post-info {
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.app__post-list .app__post-card .post-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #d05270;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d05270;
+  width: fit-content;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.footer {
+  position: relative;
+  text-align: center;
+  margin: 5rem 0;
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    width: 90%;
+    margin: auto;
+  }
+
+  .app__links-container {
+    position: absolute;
+    left: 0%;
+    top: 8%;
+    width: 100%;
+    height: 0%;
+    background-color: #fff;
+    transition: height 250ms ease-in-out;
+    opacity: 0;
+  }
+
+  .app__links-container.active {
+    height: 100%;
+    opacity: 1;
+  }
+
+  .menu_items {
+    flex-direction: column;
+  }
+
+  .menu_items li {
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+  .menu__collapse {
+    display: block;
+  }
+
+  .app_title2 {
+    display: block;
+    margin-right: 1rem;
+  }
+
+  .app_title {
+    display: none;
+  }
+
+  .app__showcase {
+    display: flex;
+    margin: 5rem 0;
+  }
+
+  .app__showcase-info {
+    padding: 0;
+  }
+  .app__showcase-image {
+    display: none;
+  }
+
+  .app__showcase-info h1,
+  h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #d05270;
+    font-weight: bold;
+  }
+
+  .app__showcase-info h3 {
+    color: #424242;
+    font-weight: 500;
+  }
+
+  .app__showcase-info p {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .app__links {
+    flex-direction: row;
+  }
+
+  .app__links .app__link {
+    color: #fff;
+    font-size: 8px;
+    font-weight: 500;
+    height: 40px;
+  }
+
+  .app__blog-categories {
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .app__blog-categories .item {
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+
+  .app__blog-categories .item.active {
+    font-size: 14px;
+  }
+
+  .app__post-list .app__post-card {
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+
+  .app__post-list .app__post-card .post-image {
+    height: 200px;
+    width: 100px;
+  }
+
+  .app__post-list .app__post-card .post-date {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .app__post-list .app__post-card .post-title {
+    font-size: 20px;
+  }
+
+  .app__post-list .app__post-card .post-info {
+    font-size: 14px;
+  }
+
+  .app__post-list .app__post-card .post-link {
+    font-size: 14px;
+  }
+}
