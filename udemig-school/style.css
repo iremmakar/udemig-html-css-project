@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* common */
+
+.center-div {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.box-heading {
+  font-size: 35px;
+  margin-top: 20px 0;
+}
+
+.box-desc {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.center-col {
+  flex-basis: 30%;
+  border-radius: 10px;
+}
+
+/* header */
+
+header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}
+
+.nav-links ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: red;
+  margin-top: 5px;
+  display: block;
+}
+
+.nav-links ul li a:hover::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.nav-links .bi {
+  color: white;
+  font-size: 30px;
+  display: none;
+}
+
+.nav-links .bi :hover {
+  font-size: 35px;
+  transition: 0.3s;
+}
+
+/* text-box*/
+
+.text-box {
+  width: 90%;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 60px;
+}
+
+.text-box p {
+  margin: 10px 40px;
+}
+
+.hero-btn {
+  background-color: gold;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 30px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+}
+
+.hero-btn:hover {
+  border: 1px solid red;
+  background-color: red;
+  transition: 0.3s;
+}
+
+/*  courses*/
+
+.course p {
+  color: #777;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-col {
+  background-color: rgb(233, 229, 222);
+
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.course-col h3 {
+  margin: 10px;
+}
+
+.course-col:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+
+/*  campus */
+
+.campus p {
+  margin-bottom: 40px;
+}
+
+.campus-col {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.campus-col img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.layer:hover {
+  background-color: rgba(190, 109, 38, 0.4);
+  transition: 0.3s;
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 25px;
+  color: white;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+  bottom: 0;
+}
+
+.layer:hover h3 {
+  bottom: 50%;
+  opacity: 1;
+}
+
+/*  facilities */
+
+.facilities-col {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.facilities-col p {
+  margin: 10px;
+}
+
+.facilities .row img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* testimonials */
+
+.testemonials {
+  padding-top: 90px;
+}
+
+.testemonial-col {
+  background-color: antiquewhite;
+  margin-bottom: 10px;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px;
+}
+
+.testemonial-col img {
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 3px solid red;
+}
+
+.testemonial-col div h2 {
+  margin-top: 10px;
+}
+
+.testemonial-col div .bi {
+  color: red;
+}
+
+/* ua */
+
+.ua {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("bg.jpg");
+  padding: 100px 0;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.ua h1 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+/* footer */
+
+footer {
+  padding: 30px;
+}
+
+footer h1 {
+  margin: 20px;
+}
+
+.icons .bi {
+  color: red;
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .nav-links .bi {
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    display: none;
+  }
+
+  .text-box h1 {
+    font: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .campus .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
