@@ -1,1 +1,1 @@
-![](retaurant.gif)
+![](restaurant.gif)
