@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  position: sticky;
+  z-index: 3;
+}
+
+.logo {
+  width: 5rem;
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  width: 100%;
+  flex: 2;
+}
+
+.menu .menu-list {
+  list-style: none;
+  padding: 1rem;
+  color: rgb(166, 160, 160);
+}
+
+.user {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  padding: 1rem;
+  justify-content: end;
+  color: rgb(166, 160, 160);
+  flex: 1;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: black;
+  height: 100%;
+}
+
+.aside {
+  width: 5%;
+  background-color: black;
+  z-index: 4;
+  height: 100%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  position: fixed;
+}
+
+.icons .icon:nth-child(1) {
+  padding-top: 0;
+}
+
+.icon {
+  color: white;
+  padding: 1.5rem;
+  padding-left: 0.4rem;
+}
+
+.content2 .content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("spiderman.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content2 {
+  position: relative;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+.main .content2 .content .contentSpider {
+  position: absolute;
+  width: 50%;
+  top: 40%;
+  left: 30%;
+  transform: translate(-40%, -30%);
+}
+
+.contentSpider p {
+  background-color: rgba(154, 135, 135, 0.4);
+  color: rgb(181, 171, 171);
+}
+
+.contentSpider .buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contentSpider .buttons i {
+  padding-right: 0.4rem;
+}
+
+.contentSpider .buttons .button1 {
+  width: 5rem;
+  height: 2rem;
+  outline: none;
+  border: none;
+}
+
+.contentSpider .buttons .button2 {
+  width: 8rem;
+  height: 2rem;
+  outline: none;
+  border: none;
+  background-color: rgba(154, 135, 135, 0.4);
+  color: white;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 300px;
+}
+
+.movie-list h1 {
+  color: white;
+  margin: 3rem;
+  margin-left: 0;
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  transform: translateX(0);
+  transition: 2s all ease-in-out;
+}
+
+.movie-list .movies .movie img {
+  width: 200px;
+  height: 200px;
+}
+
+.movie-list .movies .movie {
+  position: relative;
+  display: flex;
+}
+
+.movie-title {
+  display: none;
+}
+.button-group {
+  display: none;
+}
+.movie-list .movies .movie:hover .movie-title {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  color: white;
+  background-color: rgba(125, 127, 129, 0.3);
+}
+
+.movie-list .movies .movie:hover .button-group {
+  display: block;
+  position: absolute;
+  top: 7rem;
+  left: 3rem;
+  color: white;
+  background-color: rgba(125, 127, 129, 0.3);
+  padding: 0.5rem;
+  border-radius: 3rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-list .movies .button-group button {
+  width: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.movie-list .movies .movie {
+  transition: all 3s;
+}
+
+.movie-list .movies .movie:hover {
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+.chevron {
+  color: white;
+  width: 100px;
+  display: flex;
+  font-size: 100px;
+  position: absolute;
+  right: 0;
+  top: 10rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.chevron:hover {
+  opacity: 1;
+}
+
+/* dark mode*/
+
+.main.active {
+  background-color: white;
+  color: black;
+}
+
+.header.active {
+  color: black;
+  background-color: white;
+}
+
+.icon i.active {
+  color: black;
+}
+
+.movie-list h1.active {
+  color: black;
+}
+
+.menu .menu-list.active {
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(15px);
+}
+
+.toggle {
+  display: flex;
+  margin-left: 1rem;
+  color: goldenrod;
+  width: 40px;
+  background-color: white;
+  height: 20px;
+  border-radius: 30px;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+}
