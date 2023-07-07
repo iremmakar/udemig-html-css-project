@@ -1,1 +1,1 @@
-![](movie-site.gif)
+![](movie.gif)
