@@ -2,32 +2,31 @@ const arrows = document.querySelectorAll(".chevron");
 
 const movieList = document.querySelectorAll(".movies");
 
-console.log(movieList);
-
 arrows.forEach((arrow, i) => {
-  let clickCounter = 0;
-  const imageItem = movieList[i].querySelectorAll("img").length;
+  const movieLength = movieList[i].querySelectorAll("img").length;
+  let x = 0;
+  let y = 0;
+  let counter = 0;
 
-  arrow.addEventListener("click", function () {
-    clickCounter++;
-    if (imageItem - (4 + clickCounter) >= 0) {
-      movieList[i].style.transform = `translateX(${
-        movieList[i].computedStyleMap().get("transform")[0].x.value - 300
-      }px)`;
+  arrow.addEventListener("click", () => {
+    if (counter <= 2) {
+      movieList[i].children[x].style.display = "none";
+      counter++;
+      x++;
     } else {
-      movieList[i].style.transform = "translateX(0)";
+      for (y = 0; y < counter; y++) {
+        movieList[i].children[y].style.display = "block";
+      }
     }
   });
 });
 
-/*dark mode */
-
-const ball = document.querySelector(".toggle-ball");
+const mode = document.querySelector(".mode");
 
 const items = document.querySelectorAll(
-  ".main,.header,.icon i,.movie-list h1,.menu .menu-list,.toggle,.toggle-ball"
+  ".main,.header,.icon i,.movie-list h1,.menu .menu-list,.dark"
 );
 
-ball.addEventListener("click", function () {
+mode.addEventListener("click", function () {
   items.forEach((item) => item.classList.toggle("active"));
 });

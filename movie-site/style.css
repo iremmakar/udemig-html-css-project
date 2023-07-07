@@ -182,6 +182,7 @@ body {
 .movie-list .movies .movie {
   position: relative;
   display: flex;
+  transition: 2s all ease-in-out;
 }
 
 .movie-title {
@@ -269,34 +270,7 @@ body {
   color: black;
 }
 
-.toggle.active {
-  background-color: black;
-}
-
-.toggle-ball.active {
-  background-color: white;
-  transform: translateX(15px);
-}
-
-.toggle {
-  display: flex;
-  margin-left: 1rem;
-  color: goldenrod;
-  width: 40px;
-  background-color: white;
-  height: 20px;
-  border-radius: 30px;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-}
-
-.toggle-ball {
-  width: 18px;
-  height: 18px;
-  background-color: black;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  right: 1rem;
+.dark.active {
+  background-color: black !important;
+  color: white;
 }
